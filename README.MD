@@ -801,7 +801,7 @@ The configuration.yaml file will include the parameters to define what data valu
     <strong><li>HTTPS</li></strong>
 </td>
 <td>
-<div>Listening port for elasticsearch </div>
+<div>Protocol used for elasticsearch; HTTP / HTTPS </div>
 </td>
 </tr>
 
@@ -865,7 +865,7 @@ The configuration.yaml file will include the parameters to define what data valu
     <strong><li>False&nbsp;←</li></strong>
 </td>
 <td>
-<div>Elasticsearch fieldname used for time filer.  Ex:  @timestamp</div>
+<div>Define if elasticsearch has authentication enabled</div>
 </td>
 </tr>
 
@@ -908,6 +908,682 @@ The configuration.yaml file will include the parameters to define what data valu
 <div>If auth-enabled is True, password provided for authentication to elasticsearch</div>
 </td>
 </tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>graphite</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for sending metrics to graphite</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>enable</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+
+</div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Enable sending metrics to graphite</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>IP or FQDN for sending data to graphite</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server_port</b>
+<div style="font-size: small">
+<span style="color: purple">integer</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Listening port for graphite </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>influxdb</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for sending metrics to influxdb</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>enable</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+
+</div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Enable sending metrics to influxdb</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>IP or FQDN for sending data to influxdb</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server_port</b>
+<div style="font-size: small">
+<span style="color: purple">integer</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Listening port for influxdb </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>protocol</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td><li>HTTP</li></b>
+    <strong><li>HTTPS</li></strong>
+</td>
+<td>
+<div>Protocol used for elasticsearch; HTTP / HTTPS </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>db</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Influxdb DB used for Avi metrics</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>metric_prefix</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>                  
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>If desired, prefix to apply to metric names</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>auth-enabled</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Define if Influxdb is setup for authentication</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>username</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>                 
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>If auth-enabled is True, username used for authentication to influxdb</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>password</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>                 
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>If auth-enabled is True, password provided for authentication to influxdb</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>logstash</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for sending metrics to logstash</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>enable</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+
+</div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Enable sending metrics to logstash</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>IP or FQDN for sending data to logstash</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server_port</b>
+<div style="font-size: small">
+<span style="color: purple">integer</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Listening port for logstash </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>protocol</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>                
+</div>
+</td>
+</div>
+<td><li>UDP&nbsp;←</li></b>
+    <strong><li>TCP</li></strong>
+</td>
+<td>
+<div>Protocol used for logstash; UDP / TCP </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>splunk</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for sending metrics to Splunk HEC</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>enable</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+
+</div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Enable sending metrics to Splunk</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>IP or FQDN for sending data to Splunk</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>hec_port</b>
+<div style="font-size: small">
+<span style="color: purple">integer</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Listening port for Splunk HEC </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>hec_protocol</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>                
+</div>
+</td>
+</div>
+<td><li>HTTP</li>
+    <li>HTTPS</li>
+</td>
+<td>
+<div>Protocol used for Splunk HEC; HTTP / HTTPS </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>hec_token</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>HEC Token used for sending data to Splunk</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>index_type</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td><li>event</li>
+    <li>metric</li>
+</td>
+<td>
+<div>Type of index configured for receiving Avi metrics</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>index</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Index name setup for receiving Avi metrics</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>wavefront</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for sending metrics to Wavefront</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>enable</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+
+</div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Enable sending metrics to Wavefront</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>instance</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>IP or FQDN for Wavefront</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>api_key</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>                  
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>If using Wavefront direct ingestion, API used for authentication </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>proxy_port</b>
+<div style="font-size: small">
+<span style="color: purple">integer</span>                
+</div>
+</td>
+</div>
+<td>DEFAULT: 2878
+</td>
+<td>
+<div>If using Wavefront proxy, listening port for proxy</div>
+</td>
+</tr>
+
 
 </tbody>
 </table>
