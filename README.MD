@@ -47,7 +47,7 @@ $ python3 avimetrics.py
 The configuration.yaml file will include the parameters to define what data values are desired for each Avi Controller cluster.  Within the configuration.yaml file, you will define controller(s) within a list under the key "controllers".  For each controller entry the following values are available:
 
 
-<table class="documentation-table" cellpadding="0" border="0">
+<table class="documentation-table" cellpadding="0" border="1">
     <tbody><tr>
         <th colspan="2">Parameter</th>
         <th>Choices/<font color="blue">Defaults</font></th>
