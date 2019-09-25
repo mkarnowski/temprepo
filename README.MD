@@ -551,6 +551,8 @@ The configuration.yaml file will include the parameters to define what data valu
 <tr>
 <td>
 </td>
+<td>
+</td>
 <td class="elbow-placeholder"></td>
 <td colspan="1">
 <b>enable</b>
@@ -559,8 +561,6 @@ The configuration.yaml file will include the parameters to define what data valu
 </div>
 </td>
 </div>
-</td>
-<td>
 </td>
 <td>
 <div>Enable sending metrics to appdynamics http endpoint listener</div>
