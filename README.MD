@@ -543,7 +543,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td>
-<div>Retrieve performance metrics for controllers</div>
+<div>Parameters for sending data to appdynamics http endpoint listener</div>
 </td>
 </tr>
 
@@ -557,7 +557,8 @@ The configuration.yaml file will include the parameters to define what data valu
 <td colspan="1">
 <b>enable</b>
 <div style="font-size: small">
-<span style="color: purple">boolean</span>                 
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
 </div>
 </td>
 
@@ -570,7 +571,343 @@ The configuration.yaml file will include the parameters to define what data valu
 </td>
 </tr>
 
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>IP or FQDN for the Appdynamics HTTP endpoint listener</div>
+</td>
+</tr>
 
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server_port</b>
+<div style="font-size: small">
+<span style="color: purple">integer</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Listening port for the Appdynamics HTTP endpoint listener</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>datadog</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for sending metrics to datadog</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>enable</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+
+</div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Enable sending metrics to datadog</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>api_url</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>API url for sending data to datadog. EX:  app.datadoghq.com/api/v1/series?api_key=</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>api_key</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>API key used for authentication to datadog api</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>elasticsearch</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for sending metrics to elasticsearch</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>enable</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+
+</div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Enable sending metrics to elasticsearch</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>IP or FQDN for sending data to elasticsearch</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>server_port</b>
+<div style="font-size: small">
+<span style="color: purple">integer</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Listening port for elasticsearch </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>protocol</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td><li>HTTP</li></b>
+    <strong><li>HTTPS</li></strong>
+</td>
+<td>
+<div>Listening port for elasticsearch </div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>index</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Elasticsearch index used for Avi metrics</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>timestamp</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>Elasticsearch fieldname used for time filer.  Ex:  @timestamp</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>auth-enabled</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>  
+/ <span style="color: red">required</span>                   
+</div>
+</td>
+</div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Elasticsearch fieldname used for time filer.  Ex:  @timestamp</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>username</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>                 
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>If auth-enabled is True, username used for authentication to elasticsearch</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>password</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>                 
+</div>
+</td>
+</div>
+<td>
+</td>
+<td>
+<div>If auth-enabled is True, password provided for authentication to elasticsearch</div>
+</td>
+</tr>
 
 </tbody>
 </table>
