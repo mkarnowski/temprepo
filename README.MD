@@ -431,6 +431,8 @@ The configuration.yaml file will include the parameters to define what data valu
 <div>List of pool metrics to pull from API</div>
 </td>
 </tr>
+<td>
+</td>
 
 <tr>
 <td class="elbow-placeholder"></td>
@@ -450,6 +452,8 @@ The configuration.yaml file will include the parameters to define what data valu
 </tr>
 
 <tr>
+<td>
+</td>
 <td>
 </td>
 <td class="elbow-placeholder"></td>
@@ -473,6 +477,8 @@ The configuration.yaml file will include the parameters to define what data valu
 <tr>
 <td>
 </td>
+<td>
+</td>
 <td class="elbow-placeholder"></td>
 <td colspan="2">
 <b>controller_realtime</b>
@@ -492,6 +498,8 @@ The configuration.yaml file will include the parameters to define what data valu
 
 
 <tr>
+<td>
+</td>
 <td>
 </td>
 <td class="elbow-placeholder"></td>
