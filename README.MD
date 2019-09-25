@@ -510,6 +510,65 @@ The configuration.yaml file will include the parameters to define what data valu
 </td>
 </tr>
 
+
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="3">
+<b>metrics_endpoint_confiig</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for defining desired endpoints for the metrics</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>appdynamics_http</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Retrieve performance metrics for controllers</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>enable</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Enable sending metrics to appdynamics http endpoint listener</div>
+</td>
+</tr>
+
+
+
 </tbody>
 </table>
 
