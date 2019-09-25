@@ -47,38 +47,57 @@ $ python3 avimetrics.py
 The configuration.yaml file will include the parameters to define what data values are desired for each Avi Controller cluster.  Within the configuration.yaml file, you will define controller(s) within a list under the key "controllers".  For each controller entry the following values are available:
 
 
- <table class="table table table-bordered table-hover">  
- <tbody>       
- <tr>   
- <th>Parameter
- </th>
- <th>Choices/<span style="color:#0000FF">Defaults</span>
- </th>
- <th>Comments
- </th>
- </tr>
- <tr>    
- <td colspan=2><strong>controllers</strong><br>
- <span style="color:#810082">list</span>
-  <table class="table table table-bordered table-hover">  
- <tbody>      
-<td colspan=1>test</td>
-<td>foo</td>
-<td>foo2<td>
-   </tbody>
- </table> 
- </td>
- <td></td>
- <td>List of Controllers and their relevant metrics configurations</td>
+<table class="documentation-table" cellpadding="0" border="0">
+    <tbody><tr>
+        <th colspan="2">Parameter</th>
+        <th>Choices/<font color="blue">Defaults</font></th>
+        <th width="100%">Comments</th>
+<tr>
+<td colspan="2">
+<b>device_read_bps</b>
+<div style="font-size: small">
+<span style="color: purple">list</span>
+</div>
+<div style="font-style: italic; font-size: small; color: darkgreen">added in 2.8</div>                </td>
+<td>
+</td>
+<td>
+<div>List of device path and read rate (bytes per second) from device.</div>
+</td>
 </tr>
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>path</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>
+/ <span style="color: red">required</span>                    
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Device path in the container.</div>
+</td>
 </tr>
- <td>
- </td>
-
- </td>
- </tr>
-   </tbody>
- </table> 
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>rate</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>
+/ <span style="color: red">required</span>                    </div>
+</td>
+<td>
+                                                                                                                                                        </td>
+                                                            <td>
+                                                                    <div>Device read limit. Format: &lt;number&gt;[&lt;unit&gt;]</div>
+                                                <div>Number is a positive integer. Unit can be one of <code>B</code> (byte), <code>K</code> (kibibyte, 1024B), <code>M</code> (mebibyte), <code>G</code> (gibibyte), <code>T</code> (tebibyte), or <code>P</code> (pebibyte)</div>
+                                                <div>Omitting the unit defaults to bytes.</div>
+                                                                            </td>
+        </tr>
+</tbody>
+</tbody>
 
 
  <tr>   
