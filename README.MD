@@ -333,6 +333,182 @@ The configuration.yaml file will include the parameters to define what data valu
 </td>
 </tr>
 
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>pool_stats_config</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for defining desired pool metrics</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>pool_metrics</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Retrieve performance metrics for pools</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>pool_realtime</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Pull realtime metrics for pools if enabled in Avi config</div>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>pool_runtime</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Pull runtime data for pools</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>pool_metrics_list</b>
+<div style="font-size: small">
+<span style="color: purple">list</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><strong>Default:</strong> Script contains a list of default pool metric.  List provided further within this document
+</td>
+<td>
+<div>List of pool metrics to pull from API</div>
+</td>
+</tr>
+
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>controller_stats_config</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for defining desired controller metrics</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>controller_metrics</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Retrieve performance metrics for controllers</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>controller_realtime</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Pull realtime metrics for controllers if enabled in Avi config</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>controller_metrics_list</b>
+<div style="font-size: small">
+<span style="color: purple">list</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><strong>Default:</strong> Script contains a list of default controller metric.  List provided further within this document
+</td>
+<td>
+<div>List of controller metrics to pull from API</div>
+</td>
+</tr>
 
 </tbody>
 </table>
