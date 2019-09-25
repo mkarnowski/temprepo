@@ -60,17 +60,17 @@ The configuration.yaml file will include the parameters to define what data valu
  <tr>    
  <td colspan=2><strong>controllers</strong><br>
  <span style="color:#810082">list</span>
- </td>
- <td></td>
- <td>List of Controllers and their relevant metrics configurations</td>
-</tr>
- <table class="table table table-bordered table-hover">  
+  <table class="table table table-bordered table-hover">  
  <tbody>      
 <td colspan=1>test</td>
 <td>foo</td>
 <td>foo2<td>
    </tbody>
  </table> 
+ </td>
+ <td></td>
+ <td>List of Controllers and their relevant metrics configurations</td>
+</tr>
 </tr>
  <td>
  </td>
