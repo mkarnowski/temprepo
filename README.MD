@@ -154,8 +154,6 @@ The configuration.yaml file will include the parameters to define what data valu
 <tr>
 <td>
 </td>
-<td>
-</td>
 <td class="elbow-placeholder"></td>
 <td colspan="1">
 <b>virtualservice_metrics</b>
