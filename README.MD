@@ -47,28 +47,28 @@ $ python3 avimetrics.py
 The configuration.yaml file will include the parameters to define what data values are desired for each Avi Controller cluster.  Within the configuration.yaml file, you will define controller(s) within a list under the key "controllers".  For each controller entry the following values are available:
 
 
-<table class="documentation-table" cellpadding="0" border="1">
+<table class="documentation-table" cellpadding="0" border="0">
     <tbody><tr>
-        <th colspan="2">Parameter</th>
+        <th colspan="3">Parameter</th>
         <th>Choices/<font color="blue">Defaults</font></th>
         <th width="100%">Comments</th>
 <tr>
 <td colspan="2">
-<b>device_read_bps</b>
+<b>controllers</b>
 <div style="font-size: small">
 <span style="color: purple">list</span>
 </div>
-<div style="font-style: italic; font-size: small; color: darkgreen">added in 2.8</div>                </td>
+</td>
 <td>
 </td>
 <td>
-<div>List of device path and read rate (bytes per second) from device.</div>
+<div>List of Avi controller clusters and their relevant metrics configurations.</div>
 </td>
 </tr>
 <tr>
 <td class="elbow-placeholder"></td>
 <td colspan="1">
-<b>path</b>
+<b>avi_cluster_name</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
 / <span style="color: red">required</span>                    
@@ -77,49 +77,84 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td>
-<div>Device path in the container.</div>
+<div>Label that Avi controller cluster will be referred as.</div>
 </td>
 </tr>
 <tr>
 <td class="elbow-placeholder"></td>
 <td colspan="1">
-<b>rate</b>
+<b>avi_controller</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
-/ <span style="color: red">required</span>                    </div>
+/ <span style="color: red">required</span>                    
+</div>
+</td>
+</div>
 </td>
 <td>
-                                                                                                                                                        </td>
-                                                            <td>
-                                                                    <div>Device read limit. Format: &lt;number&gt;[&lt;unit&gt;]</div>
-                                                <div>Number is a positive integer. Unit can be one of <code>B</code> (byte), <code>K</code> (kibibyte, 1024B), <code>M</code> (mebibyte), <code>G</code> (gibibyte), <code>T</code> (tebibyte), or <code>P</code> (pebibyte)</div>
-                                                <div>Omitting the unit defaults to bytes.</div>
-                                                                            </td>
-        </tr>
+</td>
+<td>
+<div>FQDN or IP address that the script will connect to for API calls</div>
+</td>
+</tr>
+
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>avi_user</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>
+/ <span style="color: red">required</span>                    
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Username that will be used to authenticate to Avi controller cluster</div>
+</td>
+</tr>
+
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>avi_pass</b>
+<div style="font-size: small">
+<span style="color: purple">string</span>
+/ <span style="color: red">required</span>                    
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Password that will be used to authenticate to Avi controller cluster</div>
+</td>
+</tr>
+
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>virtualservice_stats_config</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Paremeters for defining desired Virtualservice metrics</div>
+</td>
+</tr>
+
 </tbody>
-</tbody>
+</table>
 
 
- <tr>   
- </td>
- <td>Avi Vantage controller</td>
- <td>169.254.0.100</td>
- <td>tcp:80, tcp:443(GUI), tcp:5054, tcp:5098(ssh), tcp:8444, udp:161</td>
- </tr>
- <tr>    
- <td><strong>k8_(various)</strong></td>
- <td>Kubernetes VM</td>
- <td>various</td>
- <td>tcp:30000(GUI), tcp:8443</td>
- </tr>
- <tr>    
- <td><strong>kubeclient1</strong></td>
- <td>Client used for traffic generation</td>
- <td>169.254.8.8</td>
- <td>none</td>
- </tr>
-  </tbody>
- </table>
 
 
 
