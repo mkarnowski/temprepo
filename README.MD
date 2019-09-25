@@ -49,11 +49,11 @@ The configuration.yaml file will include the parameters to define what data valu
 
 <table class="documentation-table" cellpadding="0" border="0">
     <tbody><tr>
-        <th colspan="4">Parameter</th>
+        <th colspan="3">Parameter</th>
         <th>Choices/<font color="blue">Defaults</font></th>
         <th width="100%">Comments</th>
 <tr>
-<td colspan="4">
+<td colspan="3">
 <b>controllers</b>
 <div style="font-size: small">
 <span style="color: purple">list</span>
@@ -67,7 +67,7 @@ The configuration.yaml file will include the parameters to define what data valu
 </tr>
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="3">
+<td colspan="2">
 <b>avi_cluster_name</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
@@ -82,7 +82,7 @@ The configuration.yaml file will include the parameters to define what data valu
 </tr>
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="3">
+<td colspan="2">
 <b>avi_controller</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
@@ -100,7 +100,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="3">
+<td colspan="2">
 <b>avi_user</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
@@ -118,7 +118,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="3">
+<td colspan="2">
 <b>avi_pass</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
@@ -136,7 +136,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="3">
+<td colspan="2">
 <b>virtualservice_stats_config</b>
 <div style="font-size: small">
 <span style="color: purple">dictionary</span>                 
@@ -155,7 +155,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>virtualservice_metrics</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -176,7 +176,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>virtualservice_realtime</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -198,7 +198,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>virtualservice_runtime</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -218,7 +218,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>virtualservice_metrics_list</b>
 <div style="font-size: small">
 <span style="color: purple">list</span>                 
@@ -236,7 +236,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="3">
+<td colspan="2">
 <b>serviceengine_stats_config</b>
 <div style="font-size: small">
 <span style="color: purple">dictionary</span>                 
@@ -255,7 +255,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>serviceengine_metrics</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -276,7 +276,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>serviceengine_realtime</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -298,7 +298,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>serviceengine_runtime</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -318,7 +318,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>serviceengine_metrics_list</b>
 <div style="font-size: small">
 <span style="color: purple">list</span>                 
@@ -335,7 +335,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="3">
+<td colspan="2">
 <b>pool_stats_config</b>
 <div style="font-size: small">
 <span style="color: purple">dictionary</span>                 
@@ -354,7 +354,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>pool_metrics</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -375,7 +375,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>pool_realtime</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -397,7 +397,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>pool_runtime</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -417,7 +417,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>pool_metrics_list</b>
 <div style="font-size: small">
 <span style="color: purple">list</span>                 
@@ -431,12 +431,10 @@ The configuration.yaml file will include the parameters to define what data valu
 <div>List of pool metrics to pull from API</div>
 </td>
 </tr>
-<td>
-</td>
 
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="3">
+<td colspan="2">
 <b>controller_stats_config</b>
 <div style="font-size: small">
 <span style="color: purple">dictionary</span>                 
@@ -454,10 +452,8 @@ The configuration.yaml file will include the parameters to define what data valu
 <tr>
 <td>
 </td>
-<td>
-</td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>controller_metrics</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -477,10 +473,8 @@ The configuration.yaml file will include the parameters to define what data valu
 <tr>
 <td>
 </td>
-<td>
-</td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>controller_realtime</b>
 <div style="font-size: small">
 <span style="color: purple">boolean</span>                 
@@ -500,10 +494,8 @@ The configuration.yaml file will include the parameters to define what data valu
 <tr>
 <td>
 </td>
-<td>
-</td>
 <td class="elbow-placeholder"></td>
-<td colspan="2">
+<td colspan="1">
 <b>controller_metrics_list</b>
 <div style="font-size: small">
 <span style="color: purple">list</span>                 
