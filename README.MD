@@ -1093,7 +1093,7 @@ The configuration.yaml file will include the parameters to define what data valu
 </td>
 </div>
 <td><li>HTTP</li></b>
-    <strong><li>HTTPS</li></strong>
+    <li>HTTPS</li>
 </td>
 <td>
 <div>Protocol used for Influxdb; HTTP / HTTPS </div>
@@ -1300,8 +1300,8 @@ The configuration.yaml file will include the parameters to define what data valu
 </div>
 </td>
 </div>
-<td><li>UDP&nbsp;←</li></b>
-    <strong><li>TCP</li></strong>
+<td><strong><li>UDP&nbsp;←</li></strong>
+    <li>TCP</li>
 </td>
 <td>
 <div>Protocol used for logstash; UDP / TCP </div>
