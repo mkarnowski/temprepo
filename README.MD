@@ -62,14 +62,25 @@ The configuration.yaml file will include the parameters to define what data valu
  <span style="color:#810082">list</span>
      <table class="table table table-bordered table-hover">  
      <tbody> 
-     <tr>   <strong>avi_cluster_name</strong><br>
+     <tr>   
+     <td><strong>avi_cluster_name</strong><br>
      <span style="color:#810082">string</span> / <span style="color:green">required</span>
+     </td>
      </tr>
     </tbody>
     </table>
  <td>
+     <table class="table table table-bordered table-hover">  
+     <tbody> 
+     <tr>   
+     <td><strong>avi_cluster_name</strong><br>
+     <span style="color:#810082">string</span> / <span style="color:green">required</span>
+     </td>
+     </tr>
+    </tbody>
+    </table>
  </td>
- <td>
+ <td> List of Controllers and their relevant metrics configurations
  </td>
  </tr>
    </tbody>
