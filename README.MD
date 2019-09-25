@@ -53,7 +53,7 @@ The configuration.yaml file will include the parameters to define what data valu
         <th>Choices/<font color="blue">Defaults</font></th>
         <th width="100%">Comments</th>
 <tr>
-<td colspan="2">
+<td colspan="3">
 <b>controllers</b>
 <div style="font-size: small">
 <span style="color: purple">list</span>
@@ -67,7 +67,7 @@ The configuration.yaml file will include the parameters to define what data valu
 </tr>
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="1">
+<td colspan="2">
 <b>avi_cluster_name</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
@@ -82,7 +82,7 @@ The configuration.yaml file will include the parameters to define what data valu
 </tr>
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="1">
+<td colspan="2">
 <b>avi_controller</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
@@ -100,7 +100,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="1">
+<td colspan="2">
 <b>avi_user</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
@@ -118,7 +118,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="1">
+<td colspan="2">
 <b>avi_pass</b>
 <div style="font-size: small">
 <span style="color: purple">string</span>
@@ -136,7 +136,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 <tr>
 <td class="elbow-placeholder"></td>
-<td colspan="1">
+<td colspan="2">
 <b>virtualservice_stats_config</b>
 <div style="font-size: small">
 <span style="color: purple">dictionary</span>                 
@@ -147,7 +147,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td>
-<div>Paremeters for defining desired Virtualservice metrics</div>
+<div>Parameters for defining desired Virtualservice metrics</div>
 </td>
 </tr>
 
