@@ -7,7 +7,7 @@ The script supports a number of different endpoints; current support includes Ap
 This repository includes that necessary files to deploy a centralized metrics script
 - **Requirements**
     - **python 3.6+**
-    - **python3-yaml+**
+    - **python3-yaml**
     - **python3-requests**
 
 
@@ -563,8 +563,8 @@ The configuration.yaml file will include the parameters to define what data valu
 </td>
 
 </div>
-<td><li>True</li></b>
-    <strong><li>False&nbsp;←</li></strong>
+<td><li>True</li>
+    <li>False</li>
 </td>
 <td>
 <div>Enable sending metrics to appdynamics http endpoint listener</div>
@@ -649,8 +649,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 </div>
 <td><li>True</li></b>
-    <strong><li>False&nbsp;←</li></strong>
-</td>
+    <li>False</li>
 <td>
 <div>Enable sending metrics to datadog</div>
 </td>
@@ -734,7 +733,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 </div>
 <td><li>True</li></b>
-    <strong><li>False&nbsp;←</li></strong>
+    <li>False</li>
 </td>
 <td>
 <div>Enable sending metrics to elasticsearch</div>
@@ -798,7 +797,7 @@ The configuration.yaml file will include the parameters to define what data valu
 </td>
 </div>
 <td><li>HTTP</li></b>
-    <strong><li>HTTPS</li></strong>
+    <li>HTTPS</li>
 </td>
 <td>
 <div>Protocol used for elasticsearch; HTTP / HTTPS </div>
@@ -862,7 +861,7 @@ The configuration.yaml file will include the parameters to define what data valu
 </td>
 </div>
 <td><li>True</li></b>
-    <strong><li>False&nbsp;←</li></strong>
+    <li>False</li>
 </td>
 <td>
 <div>Define if elasticsearch has authentication enabled</div>
@@ -945,7 +944,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 </div>
 <td><li>True</li></b>
-    <strong><li>False&nbsp;←</li></strong>
+    <li>False</li>
 </td>
 <td>
 <div>Enable sending metrics to graphite</div>
@@ -1030,7 +1029,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 </div>
 <td><li>True</li></b>
-    <strong><li>False&nbsp;←</li></strong>
+    <li>False</li>
 </td>
 <td>
 <div>Enable sending metrics to influxdb</div>
@@ -1097,7 +1096,7 @@ The configuration.yaml file will include the parameters to define what data valu
     <strong><li>HTTPS</li></strong>
 </td>
 <td>
-<div>Protocol used for elasticsearch; HTTP / HTTPS </div>
+<div>Protocol used for Influxdb; HTTP / HTTPS </div>
 </td>
 </tr>
 
@@ -1151,8 +1150,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td colspan="1">
 <b>auth-enabled</b>
 <div style="font-size: small">
-<span style="color: purple">boolean</span>  
-/ <span style="color: red">required</span>                   
+<span style="color: purple">boolean</span>                 
 </div>
 </td>
 </div>
@@ -1240,7 +1238,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 </div>
 <td><li>True</li></b>
-    <strong><li>False&nbsp;←</li></strong>
+    <li>False</li>
 </td>
 <td>
 <div>Enable sending metrics to logstash</div>
@@ -1346,7 +1344,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 </div>
 <td><li>True</li></b>
-    <strong><li>False&nbsp;←</li></strong>
+    <li>False</li>
 </td>
 <td>
 <div>Enable sending metrics to Splunk</div>
@@ -1404,7 +1402,8 @@ The configuration.yaml file will include the parameters to define what data valu
 <td colspan="1">
 <b>hec_protocol</b>
 <div style="font-size: small">
-<span style="color: purple">string</span>                
+<span style="color: purple">string</span>      
+/ <span style="color: red">required</span>             
 </div>
 </td>
 </div>
@@ -1516,7 +1515,7 @@ The configuration.yaml file will include the parameters to define what data valu
 
 </div>
 <td><li>True</li></b>
-    <strong><li>False&nbsp;←</li></strong>
+   <li>False</li>
 </td>
 <td>
 <div>Enable sending metrics to Wavefront</div>
@@ -1577,7 +1576,7 @@ The configuration.yaml file will include the parameters to define what data valu
 </div>
 </td>
 </div>
-<td>DEFAULT: 2878
+<td><strong>Default:</strong> 2878
 </td>
 <td>
 <div>If using Wavefront proxy, listening port for proxy</div>
