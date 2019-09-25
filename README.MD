@@ -58,7 +58,7 @@ The configuration.yaml file will include the parameters to define what data valu
  </th>
  </tr>
  <tr>    
- <td><strong>controllers</strong><br>
+ <td colspan=2><strong>controllers</strong><br>
  <span style="color:#810082">list</span>
  </td>
  <td></td>
@@ -67,7 +67,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <tr>
 <td class="elbow-placeholder"></td>
 <td colspan=1>test</td>
-
+</tr>
  <td>
  </td>
 
