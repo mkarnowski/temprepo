@@ -147,7 +147,7 @@ The configuration.yaml file will include the parameters to define what data valu
 <td>
 </td>
 <td>
-<div>Parameters for defining desired Virtualservice metrics</div>
+<div>Parameters for defining desired virtualservice metrics</div>
 </td>
 </tr>
 
@@ -164,12 +164,175 @@ The configuration.yaml file will include the parameters to define what data valu
 </div>
 </td>
 <td><li>True</li></b>
-    <strong><li>False <-</li></strong>
+    <strong><li>False&nbsp;←</li></strong>
 </td>
 <td>
-<div>Parameters for defining desired Virtualservice metrics</div>
+<div>Retrieve performance metrics for virtualservices</div>
 </td>
 </tr>
+
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>virtualservice_realtime</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Pull realtime metrics for virtualservices if enabled in Avi config</div>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>virtualservice_runtime</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Pull runtime data for virtualservices</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>virtualservice_metrics_list</b>
+<div style="font-size: small">
+<span style="color: purple">list</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><strong>Default:</strong> Script contains a list of default virtualservice metric.  List provided further within this document
+</td>
+<td>
+<div>List of virtualservice metrics to pull from API</div>
+</td>
+</tr>
+
+
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="2">
+<b>serviceengine_stats_config</b>
+<div style="font-size: small">
+<span style="color: purple">dictionary</span>                 
+</div>
+</td>
+</div>
+</td>
+<td>
+</td>
+<td>
+<div>Parameters for defining desired serviceengine metrics</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>serviceengine_metrics</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Retrieve performance metrics for serviceengines</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>serviceengine_realtime</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Pull realtime metrics for serviceengines if enabled in Avi config</div>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>serviceengine_runtime</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
+</td>
+<td>
+<div>Pull runtime data for serviceengines</div>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>serviceengine_metrics_list</b>
+<div style="font-size: small">
+<span style="color: purple">list</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><strong>Default:</strong> Script contains a list of default serviceengine metric.  List provided further within this document
+</td>
+<td>
+<div>List of serviceengine metrics to pull from API</div>
+</td>
+</tr>
+
 
 </tbody>
 </table>
