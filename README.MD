@@ -560,7 +560,10 @@ The configuration.yaml file will include the parameters to define what data valu
 <span style="color: purple">boolean</span>                 
 </div>
 </td>
+
 </div>
+<td><li>True</li></b>
+    <strong><li>False&nbsp;←</li></strong>
 </td>
 <td>
 <div>Enable sending metrics to appdynamics http endpoint listener</div>
