@@ -151,6 +151,24 @@ The configuration.yaml file will include the parameters to define what data valu
 </td>
 </tr>
 
+<tr>
+<td class="elbow-placeholder"></td>
+<td colspan="1">
+<b>virtualservice_metrics</b>
+<div style="font-size: small">
+<span style="color: purple">boolean</span>                 
+</div>
+</td>
+</div>
+</td>
+<td><li>True</li></b>
+    <strong><li>False <-</li></strong>
+</td>
+<td>
+<div>Parameters for defining desired Virtualservice metrics</div>
+</td>
+</tr>
+
 </tbody>
 </table>
 
