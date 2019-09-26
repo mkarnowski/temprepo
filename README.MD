@@ -1736,13 +1736,12 @@ To run this script as a container, modify the files as exampled above prior to b
 $ docker build -t avimetrics .
 ```
 ### Start the container
-To start the container it is required to specify the metrics endpoint via the <strong>EN_METRIC_ENDPOINT</strong> environment variable.  To specify multiple endpoint seprate each with a colon, ":".  
+To start the container it is required to specify the configuration via the <strong>EN_CONFIGURATION</strong> environment variable.  
 
-Add the environment variable <strong>EN_NOREALTIME=True</strong> to disable retrieving realtime metrics if they are enabled within the controller, results in 5 min averages.
+Here is an example for using the contents of a local configuration.yaml as the value for EN_CONFIGURATION when creating the local container.
 
-The example below specifies running the container with sending data to multiple endpoints.
 ```sh
-$ docker run -d -e "EN_METRIC_ENDPOINT=graphite:datadog:appdynamics_http" --name avimetrics --restart always --log-opt max-size=1m avimetrics
+$ docker run -d --name avimetrics --restart always --log-opt max-size=1m -e "EN_CONFIGURATION=$(<configuration.yaml)"  avinetworks/avimetrics
 ```
 
 # Metrics Being Collected
@@ -1761,15 +1760,18 @@ $ docker run -d -e "EN_METRIC_ENDPOINT=graphite:datadog:appdynamics_http" --name
     - controller_stats.avg_mem_usage
 
 
+### Controller Cluster Runtime Metrics
+
+- Controller Cluster states
+- Subnet IP pool usage
+- License usage
+- License expiration
+- Controller software version
+
+
 
 ### Service Engine Metrics:
 
-- Virtual Server count per Service Engine
-- Service Engine count
-- Service Engine / Controller missed heartbeats
-- Service Engine connected state
-- Service Engine healthscore
-- Service Engine Virtual Service hosted used capacity
 - Statistics for each Service Engine
     - se_if.avg_bandwidth
     - se_stats.avg_connection_mem_usage
@@ -1795,6 +1797,18 @@ $ docker run -d -e "EN_METRIC_ENDPOINT=graphite:datadog:appdynamics_http" --name
     - se_stats.avg_packet_buffer_header_usage
     - se_stats.avg_packet_buffer_large_usage
     - se_stats.avg_packet_buffer_small_usage
+    - healthscore.health_score_value
+
+
+
+### Service Engine Runtime Metrics:
+
+- Virtual Server count per Service Engine
+- Service Engine count
+- Service Engine / Controller missed heartbeats
+- Service Engine connected state
+- Service Engine Virtual Service hosted used capacity
+- Service Engine software version
 
 
 
@@ -1802,19 +1816,7 @@ $ docker run -d -e "EN_METRIC_ENDPOINT=graphite:datadog:appdynamics_http" --name
 
 ### Virtual Service Stats
 
-- Virtual Service healthscore
-- Virtual Service operational status (Up/Down)
-- Pool member(s) operational status (Up/Down)
-- Which Service Engine the Virtual Service is hosted on
 - Statistics for each Virtual Service; total and broken down per Service Engine
-    - l4_server.avg_errored_connections
-    - l4_server.avg_rx_pkts
-    - l4_server.avg_bandwidth
-    - l4_server.avg_open_conns
-    - l4_server.avg_new_established_conns
-    - l4_server.avg_pool_complete_conns
-    - l4_server.apdexc
-    - l4_server.avg_total_rtt
     - l4_client.apdexc
     - l4_client.avg_bandwidth
     - l4_client.avg_application_dos_attacks
@@ -1834,19 +1836,14 @@ $ docker run -d -e "EN_METRIC_ENDPOINT=graphite:datadog:appdynamics_http" --name
     - l7_client.sum_application_response_time
     - l7_client.avg_resp_4xx_avi_errors
     - l7_client.avg_resp_5xx_avi_errors
+    - l7_client.avg_resp_2xx
     - l7_client.avg_resp_4xx
     - l7_client.avg_resp_5xx
     - l4_client.avg_total_rtt
-    - l7_server.avg_resp_latency
-    - l7_server.apdexr
     - l7_client.avg_page_load_time
     - l7_client.apdexr
     - l7_client.avg_ssl_handshakes_new
     - l7_client.avg_ssl_connections
-    - l7_server.avg_application_response_time
-    - l7_server.pct_response_errors
-    - l7_server.avg_frustrated_responses
-    - l7_server.avg_total_requests
     - l7_client.sum_get_reqs
     - l7_client.sum_post_reqs
     - l7_client.sum_other_reqs
@@ -1879,6 +1876,34 @@ $ docker run -d -e "EN_METRIC_ENDPOINT=graphite:datadog:appdynamics_http" --name
     - dns_server.avg_errored_queries
     - dns_server.avg_tcp_queries
     - dns_server.avg_udp_queries
+    - l4_server.avg_rx_pkts
+    - l4_server.avg_tx_pkts
+    - l4_server.avg_rx_bytes
+    - l4_server.avg_tx_bytes
+    - l4_server.avg_bandwidth
+    - l7_server.avg_complete_responses
+    - l4_server.avg_new_established_conns
+    - l4_server.avg_pool_open_conns
+    - l4_server.avg_pool_complete_conns
+    - l4_server.avg_open_conns
+    - l4_server.max_open_conns
+    - l4_server.avg_errored_connections
+    - l4_server.apdexc
+    - l4_server.avg_total_rtt
+    - l7_server.avg_resp_latency
+    - l7_server.apdexr
+    - l7_server.avg_application_response_time
+    - l7_server.pct_response_errors
+    - l7_server.avg_frustrated_responses
+    - l7_server.avg_total_requests
+    - healthscore.health_score_value
+
+
+### Virtual Service Runtime Stats
+
+- Virtual Service operational status (Up/Down)
+- Service Engines Virtual Service hosted on
+- Service Engine designated Primary that Virtual Service is hosted on
 
 
 
@@ -1888,7 +1913,8 @@ $ docker run -d -e "EN_METRIC_ENDPOINT=graphite:datadog:appdynamics_http" --name
 
 
 
-### Virtual Service Pool Server Metrics
+
+### Pool Server Metrics
 
 - Statistics for each invidual Pool Server
     - l4_server.avg_rx_pkts
@@ -1902,3 +1928,17 @@ $ docker run -d -e "EN_METRIC_ENDPOINT=graphite:datadog:appdynamics_http" --name
     - l4_server.avg_pool_complete_conns
     - l4_server.avg_open_conns
     - l4_server.max_open_conns
+    - l4_server.avg_errored_connections
+    - l4_server.apdexc
+    - l4_server.avg_total_rtt
+    - l7_server.avg_resp_latency
+    - l7_server.apdexr
+    - l7_server.avg_application_response_time
+    - l7_server.pct_response_errors
+    - l7_server.avg_frustrated_responses
+    - l7_server.avg_total_requests
+    - healthscore.health_score_value
+
+
+### Pool Server Runtime Metrics
+- Pool member(s) operational status (Up/Down)
