@@ -1591,141 +1591,196 @@ The configuration.yaml file will include the parameters to define what data valu
 
 
 
-## appdynamics_http.json
+## appdynamics_http
 
 Define the AppDynamics Standalone Machine Agent IP address and the port that the HTTP listener is listening on
 
 EXAMPLE:
 
 ```sh
-{"appdynamics":
-    {
-	    "server":"169.254.0.1",
-	    "server_port":8293
-    }
-}
+controllers:
+   - avi_cluster_name: demo_controller
+     avi_controller: 169.254.0.1
+     avi_user: admin
+     avi_pass: password
+     metrics_endpoint_config:
+     appdynamics_http:
+         enable: True
+         server: 169.254.0.1
+         server_port: 8293     
 ```
 
 
 
-## datadog.json
+## datadog
 
 Define the URL and API key used to send metrics into Datadog
 
 EXAMPLE:
 
 ```sh
-{"datadog":
-    {
-        "api_url" : "app.datadoghq.com/api/v1/series?api_key=",
-        "api_key" : "abcdefghijgklmnopqrstuvwxyz12345"
-    }
-}
-
+controllers:
+   - avi_cluster_name: demo_controller
+     avi_controller: 169.254.0.1
+     avi_user: admin
+     avi_pass: password
+     metrics_endpoint_config:
+         datadog:
+             enable: True
+             api_url: app.datadoghq.com/api/v1/series?api_key=
+             api_key: abcdefghijgklmnopqrstuvwxyz12345  
 ```
 
 
 
-## graphite_host.json
-
-Define the grahite server host name/ip and the tcp port carbon cache is listening on
-
-EXAMPLE:
-
-```sh
-{"graphite":
-    {
-	    "server":"127.0.0.1",
-	    "server_port":2003
-    }
-}
-```
-
-
-
-## splunk_host.json
-
-Define the values for sending values to Splunk HTTP Endpoint Collector.
-
-EXAMPLE:
-
-```sh
-{"splunk_server":{
-    "server":"169.254.0.1",
-    "_comment":"HEC_PROTOCOL OPTIONS ARE HTTP OR HTTPS",
-    "hec_protocol":"https",
-    "hec_port": 8088,
-    "hec_token":"abcdefgh-ijkl-mnop-qrst-uvwxyz123456",
-    "_comment":"INDEX TYPE EVENT OR METRIC",
-    "index_type":"event",
-    "index":"avimetrics"
-    }
-
-}
-```
-
-
-## logstash.json
-
-Define the values for sending metrics to a Logstash endpoint.  The script will send values in a format that is expecting the configured logstash codec to be json_lines.
-
-EXAMPLE:
-
-```sh
-{"logstash":
-    {
-        "_comment": "logstash codec => json_lines",
-        "server": "169.254.0.1",
-        "server_port": 517,
-        "_comment": "tcp or udp",
-        "protocol": "udp"
-    }
-}
-
-```
-
-
-## elasticsearch.json
+## elasticsearch
 
 Define the values for sending metrics to Elasticsearch via the document API.
 
 EXAMPLE:
 
 ```sh
-{"elasticsearch":
-    {
-        "server": "169.254.0.1",
-        "server_port": 9200,
-        "protocol" : "https",
-        "index": "avimetrics",
-        "_comment":"default time filter field name",
-        "timestamp": "@timestamp",
-        "_comment":"If using auth on elasticsearch set auth-enabled to true and modify the credential values",
-        "auth-enabled": true,
-        "username": "admin",
-        "password": "password"
-    }
-}
-
+controllers:
+   - avi_cluster_name: demo_controller
+     avi_controller: 169.254.0.1
+     avi_user: admin
+     avi_pass: password
+     metrics_endpoint_config:
+     elasticsearch:
+         enable: True
+         server: 169.254.0.1
+         server_port: 9200
+         protocol : https
+         index: avimetrics
+         timestamp: "@timestamp"
+         auth-enabled: True
+         username: admin
+         password: password
 ```
 
 
-## influxdb.json
+
+## graphite
+
+Define the grahite server host name/ip and the tcp port carbon cache is listening on
+
+EXAMPLE:
+
+```sh
+controllers:
+   - avi_cluster_name: demo_controller
+     avi_controller: 169.254.0.1
+     avi_user: admin
+     avi_pass: password
+     metrics_endpoint_config:
+         graphite:
+             enable: True
+             server: 169.254.0.1
+             server_port: 2003
+```
+
+
+
+## influxdb
 
 Define the values for sending metrics to InfluxDB via HTTP API.  The script will send values using the InfluxDB's Line Protocol format.
 
 EXAMPLE:
 
 ```sh
-{"influxdb":
-    {
-        "server": "169.254.0.1",
-        "server_port": 8086,
-        "protocol": "https",
-        "db": "avi"
-    }
-}
+controllers:
+   - avi_cluster_name: demo_controller
+     avi_controller: 169.254.0.1
+     avi_user: admin
+     avi_pass: password
+     metrics_endpoint_config:
+     influxdb:
+         enable: True
+         server: 169.254.0.1
+         server_port: 8086
+         protocol: https
+         db: avi
+         metric_prefix: ""
+         auth-enabled: False
+         username: admin
+         password: password
 ```
+
+
+
+## logstash
+
+Define the values for sending metrics to a Logstash endpoint.  The script will send values in a format that is expecting the configured logstash codec to be json_lines.
+
+EXAMPLE:
+
+```sh
+controllers:
+   - avi_cluster_name: demo_controller
+     avi_controller: 169.254.0.1
+     avi_user: admin
+     avi_pass: password
+     metrics_endpoint_config:
+     logstash:
+         enable: True
+         server: 169.254.0.1
+         server_port: 517
+         protocol: udp
+    
+
+```
+
+
+
+## splunk
+
+Define the values for sending values to Splunk HTTP Endpoint Collector.
+
+EXAMPLE:
+
+```sh
+controllers:
+   - avi_cluster_name: demo_controller
+     avi_controller: 169.254.0.1
+     avi_user: admin
+     avi_pass: password
+     metrics_endpoint_config:
+        splunk:
+            enable: True
+            server: 169.254.0.1
+            hec_protocol: https
+            hec_port: 8088
+            hec_token: abcdefgh-ijkl-mnop-qrst-uvwxyz123456
+            index_type: event
+            index: avi:metrics
+```
+
+
+
+## wavefront
+
+Define the values for sending values to Wavefront, either direct ingestion or through a wavefront proxy.
+
+EXAMPLE:
+
+```sh
+controllers:
+   - avi_cluster_name: demo_controller
+     avi_controller: 169.254.0.1
+     avi_user: admin
+     avi_pass: password
+     metrics_endpoint_config:
+     wavefront:
+         enable: True
+         instance: xxxxxxxx.wavefront.com
+         #_comment:  If using direct ingestion specify an api_key, if no key then wavefront proxy will be used
+         api_key: 68e639fe-be9c-439f-8ebf-ea1422a9ddb0
+         #_comment:  If using proxy specify the listening port, if not defined defaults to 2878
+         #proxy_port: 2878
+```
+
+
+
 
 
 # Run as a container
@@ -1744,7 +1799,7 @@ Here is an example for using the contents of a local configuration.yaml as the v
 $ docker run -d --name avimetrics --restart always --log-opt max-size=1m -e "EN_CONFIGURATION=$(<configuration.yaml)"  avinetworks/avimetrics
 ```
 
-# Metrics Being Collected
+# Default Metrics Being Collected
 
 
 ### Controller Cluster Metrics
