@@ -1774,12 +1774,75 @@ controllers:
          enable: True
          instance: xxxxxxxx.wavefront.com
          #_comment:  If using direct ingestion specify an api_key, if no key then wavefront proxy will be used
-         api_key: 68e639fe-be9c-439f-8ebf-ea1422a9ddb0
+         api_key: 12a345bc-de6f-789a-0bcd-ef1234a5bcd6
          #_comment:  If using proxy specify the listening port, if not defined defaults to 2878
          #proxy_port: 2878
 ```
 
 
+
+
+
+# Example configuration.yaml
+
+```sh
+controllers:
+   - avi_cluster_name: demo_controller1
+     avi_controller: 169.254.0.1
+     avi_user: admin
+     avi_pass: password
+     virtualservice_stats_config:
+         virtualservice_metrics: True
+         virtualservice_realtime: True
+         virtualservice_runtime: True
+     serviceengine_stats_config:
+         serviceengine_metrics: True
+         serviceengine_runtime: False
+         serviceengine_realtime: True
+     pool_stats_config:
+         pool_metrics: True
+         pool_runtime: True
+         pool_realtime: True
+     controller_stats_config:
+         controller_metrics: True
+         controller_runtime: True
+         controller_metrics_list:
+            - controller_stats.avg_cpu_usage
+            - controller_stats.avg_disk_usage
+            - controller_stats.avg_mem_usage
+     metrics_endpoint_config:
+         influxdb:
+             enable: True
+             server: 169.254.0.10
+             server_port: 8086
+             protocol: http
+             db: avi
+             metric_prefix: ""
+             auth-enabled: False
+             username: admin
+             password: password
+         wavefront:
+             enable: True
+             instance: xxxxxxxx.wavefront.com
+             api_key: 12a345bc-de6f-789a-0bcd-ef1234a5bcd6
+
+   - avi_cluster_name: demo_controller2
+     avi_controller: 169.254.0.2
+     avi_user: admin
+     avi_pass: password
+     virtualservice_stats_config:
+         virtualservice_metrics: True
+         virtualservice_realtime: False
+         virtualservice_runtime: False
+     controller_stats_config:
+         controller_metrics: True
+         controller_runtime: True
+     metrics_endpoint_config:
+         wavefront:
+             enable: True
+             instance: xxxxxxxx.wavefront.com
+             proxy_port: 2878
+```
 
 
 
